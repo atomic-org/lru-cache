@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    RED.nodes.registerType('LRU Cache Bucket', {
+        category: 'config',
+        defaults: {
+            name: {
+				value: 'default',
+				required: true
+			},
+            description: {
+				value: '',
+			},
+            size: {
+				value: 1000,
+				required: true
+			},
+        },
+        label: function() {
+            return this.name || 'default';
+        },
+		oneditprepare: function() {
+			$('#node-config-input-size').typedInput({
+				type: "num"
+			});
+		}
+    });
+</script>
+
+<script type="text/x-red" data-template-name="LRU Cache Bucket">
+    <div class="form-row">
+        <label for="node-config-input-name" style="width: 130px"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-config-input-name">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-description" style="width: 130px"><i class="fa fa-info-circle"></i> Description</label>
+        <input type="text" id="node-config-input-description">
+    </div>
+	<div class="form-row">
+		<label for="node-config-input-size" style="width: 130px"><i class="fa fa-comments"></i> Size</label>
+		<input type="text" id="node-config-input-size" placeholder="1000" style="width: 150px">
+	</div>
+</script>

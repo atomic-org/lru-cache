@@ -1,0 +1,30 @@
+{
+  "name": "@atomic-org/lru-cache",
+  "version": "1.0.0",
+  "description": "Least Recently Used Cache",
+  "main": "lru.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomic-org/lru-cache.git"
+  },
+  "keywords": [
+    "atomic",
+    "node-red",
+    "cache"
+  ],
+  "author": "Fred Chien <fred@brobridge.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/atomic-org/lru-cache/issues"
+  },
+  "homepage": "https://github.com/atomic-org/lru-cache#readme",
+  "node-red": {
+    "nodes": {
+      "lru-cache": "lru-cache.js",
+      "bucket": "bucket.js"
+    }
+  }
+}

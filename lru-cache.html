@@ -1,0 +1,46 @@
+<script type="text/javascript">
+	RED.nodes.registerType('LRU Cache', {
+		category: 'Cache',
+		color: '#eeaa00',
+		defaults: {
+			name: {
+				value: ''
+			},
+			bucket: {
+				type: 'LRU Cache Bucket',
+				value: ''
+			},
+			operation: {
+				value: 'read'
+			}
+		},
+		inputs: 1,
+		outputs: 1,
+		icon: 'font-awesome/fa-database',
+		label: function() {
+			return this.name || 'LRU Cache';
+		}
+	});
+</script>
+
+<script type="text/x-red" data-template-name="LRU Cache">
+	<div class="form-row">
+        <label for="node-input-name" style="width: 130px"><i class="fa fa-stack-exchange"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-bucket" style="width: 130px"><i class="fa fa-database"></i> Bucket</label>
+        <input type="text" id="node-input-bucket">
+    </div>
+	<div class="form-row">
+        <label for="node-input-operation" style="width: 130px"><i class="fa fa-play"></i> Operation</label>
+		<select id="node-input-operation">
+			<option value="read">Read</option>
+			<option value="write">Write</option>
+		</select>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="LRU Cache">
+	<p>Least Recently Used (LRU) cache.</p>
+</script>
